@@ -1,27 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .t-body-large {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.04px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-body-medium {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: 0.02px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-body-small {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.04px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-button {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: 0.4px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-display-large {
+    font-family: "Poppins", sans-serif;
+    font-size: 3.56rem;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .t-display-medium {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.813rem;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-display-small {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.25rem;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-headline-large {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-headline-medium {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.75rem;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-headline-small {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-label-large {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: 0.01px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-label-medium {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.05px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-label-small {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.688rem;
+    letter-spacing: 0.05px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-title-large {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.375rem;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  .t-title-medium {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.01px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .t-title-small {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: 0.01px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+}
+
+
+@layer base {
+  :root {
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --on-background: 100 6% 10%;
+    --background: 216 100% 99%;
+    --on-error-container: 358 100% 13%;
+    --error: 0 75% 42%;
+    --on-error: 0 0% 100%;
+    --error-container: 6 100% 92%;
+    --outline-variant: 120 6% 27%;
+    --outline: 107 4% 46%;
+    --on-tertiary-container: 188 100% 7%;
+    --tertiary: 189 31% 33%;
+    --on-tertiary: 0 0% 100%;
+    --tertiary-container: 191 71% 85%;
+    --inverse-surface: 260 3% 19%;
+    --surface: 70 60% 98%;
+    --on-surface-variant: 120 6% 27%;
+    --surface-variant: 104 17% 88%;
+    --surface-tint: 93 21% 74%;
+    --on-surface: 100 6% 10%;
+    --inverse-on-surface: 300 19% 95%;
+    --on-secondary: 0 0% 100%;
+    --secondary: 120 10% 35%;
+    --on-secondary-container: 128 35% 9%;
+    --secondary-container: 115 33% 86%;
+    --on-primary-container: 138 100% 6%;
+    --on-primary: 0 0% 100%;
+    --inverse-primary: 129 100% 90%;
+    --primary: 146 100% 21%;
+    --primary-container: 129 100% 90%;
+    --shadow: 0 0% 0%;
+    --scrim: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
