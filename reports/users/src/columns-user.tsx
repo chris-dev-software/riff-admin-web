@@ -104,7 +104,7 @@ export const columns: ColumnDef<Columns>[] = [
         {
           label: "Editar",
           handleClickOption: () =>
-            openDialog("edit-supply", {
+            openDialog("edit-user", {
               userID: id,
             }),
         },

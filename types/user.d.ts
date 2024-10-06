@@ -14,4 +14,22 @@ export interface AddUserFormValues {
   name: string;
   password: string;
   phone?: string;
+  salary: number;
+}
+
+export interface User {
+  id: number;
+  dni: string;
+  last_name: string;
+  name: string;
+  phone?: string;
+  salary: number;
+}
+
+export interface EditUserFormValues {
+  dni: string;
+  last_name: string;
+  name: string;
+  phone?: string;
+  salary: number;
 }

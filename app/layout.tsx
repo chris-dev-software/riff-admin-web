@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { ApolloWrapper } from "@/utils/apollo/client";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="min-h-screen grid">{children}</div>
-        <Toaster />
+        <ApolloWrapper>
+          <div className="min-h-screen grid">{children}</div>
+          <Toaster></Toaster>
+        </ApolloWrapper>
       </body>
     </html>
   );
